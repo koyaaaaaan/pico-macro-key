@@ -19,8 +19,6 @@ PIN_BUTTON3 = board.GP4
 PIN_BUZZER = board.GP16
 PIN_SCK_DISPLAY = board.GP21
 PIN_SDA_DISPLAY = board.GP20
-DISPLAY_WIDTH = 32
-DISPLAY_HEIGHT = 128
 
 # ready keyboard
 keyboard = Keyboard(usb_hid.devices)
@@ -49,7 +47,7 @@ buzzio.direction = digitalio.Direction.OUTPUT
 
 # ready display
 i2c = busio.I2C(PIN_SCK_DISPLAY, PIN_SDA_DISPLAY)
-display = adafruit_ssd1306.SSD1306_I2C(DISPLAY_HEIGHT, DISPLAY_WIDTH, i2c)
+display = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
 
 def buzz(times):
     global buzz
