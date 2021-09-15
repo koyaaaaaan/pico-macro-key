@@ -16,7 +16,7 @@ Spec
 - Button Switch for Shift Key
 - Button Switch
 - 3V Buzzer (optional)
-- LCD Display 128x32 I2C Mono
+- OLED LCD Display 128x32 I2C Mono
 
 ## Set up Raspberry Pi Pico
 1. Install Circuit Python
@@ -48,7 +48,7 @@ LCD Display
 
 |  Component  |  3.3V  |  GND  |  SCL  |  SDA  |
 | ---- | ---- | ---- | ---- | ---- |
-|  LCD 128x32 Mono |  3.3V  |  GND  |  GP21  |  GP20  |
+|  OLED LCD 128x32 Mono |  3.3V  |  GND  |  GP21  |  GP20  |
 
 ## Configration
 Plese edit "config.py" in Raspberry Pi Pico root directory.
