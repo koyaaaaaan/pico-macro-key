@@ -1,5 +1,5 @@
-日本語話者のかたには [README.ja.md](/README.ja.md) を用意してあります。  
-If you are Japanese speaker, we have [README.ja.md](/README.ja.md) for you.
+日本語話者のかたには [README.jp.md](/README.jp.md) を用意してあります。  
+If you are Japanese speaker, we have [README.jp.md](/README.jp.md) for you.
 
 # Pico Macro Key
 Macro Keyboard with Raspberry Pi Pico  
