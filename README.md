@@ -65,7 +65,7 @@ Plese edit "config.py" in Raspberry Pi Pico root directory.
 | keymap > data > label |  Label for display in LCD  |  1byte Numeric / Alphabet / Simbol  |
 | keymap > data > value |  Command when button is pressed down  |  1byte Numeric / Alphabet / Simbol / Tab  |
 
-## Test behaviour
+## Testing
 1. Connect Raspberry Pi Pico and PC with USB
 2. 「Locked. Enter Pin and Shift.」will be shown. Put pin no. to push shift at the end.
 3. 「You got it. Welcome to customkey. (^ ^)b」will be displayed when it succeeded.
