@@ -75,70 +75,80 @@ def isPressed(currentVal, preVal):
         return False
 
 def lockLoop():
-    global layout 
-    pinphase = 0
-    if config.uselock == True:
-      passText(pinphase, "*")
-      buzz(1)
-      time.sleep(0.1)
+    if config.uselock == False or len(config.lockpin) == 0:
+      setLayout()
+      return
+
+    pin = []
+    passText(len(pin), "*")
+    buzz(1)
+    time.sleep(0.1)
+    preBtnValS = btn_shift.value
     preBtnVal1 = btn1.value
     preBtnVal2 = btn2.value
     preBtnVal3 = btn3.value
 
     while True:
-        if config.uselock == False or pinphase == len(config.lockpin):
-            if config.layoutType == "jp":
-              layout = KeyboardLayoutJP(keyboard)
-            else:
-              layout = KeyboardLayoutUS(keyboard)
-            textShow("You got it.","Welcome to Custom Key","         -- ( ^_^)b --")
-            buzz(2)
-            time.sleep(2)
-            break
-
+        stateS = isPressed(btn_shift.value, preBtnValS)
         state1 = isPressed(btn1.value, preBtnVal1)
         state2 = isPressed(btn2.value, preBtnVal2)
         state3 = isPressed(btn3.value, preBtnVal3)
         
+        preBtnValS = btn_shift.value
         preBtnVal1 = btn1.value
         preBtnVal2 = btn2.value
         preBtnVal3 = btn3.value
 
-        if state1 and state2:
-            pinphase = 0
-            passText(pinphase, "*")
+        if stateS:
+            buzz(1)
+            if checkPin(pin):
+              setLayout()
+              return
+            pin = []
+            passText(len(pin), "*")
+        elif state1 and state2:
+            pass
         elif state1 and state3:
-            pinphase = 0
-            passText(pinphase, "*")
+            pass
         elif state2 and state3:
-            pinphase = 0
-            passText(pinphase, "*")
-        elif state1 and config.lockpin[pinphase] != 1:
-            pinphase = 0
-            passText(pinphase, "*")
-        elif state2 and config.lockpin[pinphase] != 2:
-            pinphase = 0
-            passText(pinphase, "*")
-        elif state3 and config.lockpin[pinphase] != 3:
-            pinphase = 0
-            passText(pinphase, "*")
-        elif state1 and config.lockpin[pinphase] == 1:
-            pinphase = pinphase + 1
-            passText(pinphase, "*")
-        elif state2 and config.lockpin[pinphase] == 2:
-            pinphase = pinphase + 1
-            passText(pinphase, "*")
-        elif state3 and config.lockpin[pinphase] == 3:
-            pinphase = pinphase + 1
-            passText(pinphase, "*")
+            pass
+        elif state1:
+            pin.append(1)
+            passText(len(pin), "*")
+        elif state2:
+            pin.append(2)
+            passText(len(pin), "*")
+        elif state3:
+            pin.append(3)
+            passText(len(pin), "*")
+        else:
+            pass
 
-        time.sleep(0.05)   
-    
+        time.sleep(0.05)  
+
 def passText(times, subtext):
     ts = ""
     for i in range(times):
         ts = ts + subtext
-    textShow("Locked.","Please input the pin.", " > " + ts)
+    textShow("Locked.","Enter Pin and Shift.", ">> " + ts)
+
+def checkPin(pin):
+    if len(pin) != len(config.lockpin):
+      return False
+    for i in range(len(config.lockpin)): 
+      if pin[i] != config.lockpin[i]:
+        return False
+    return True
+
+def setLayout():
+    global layout
+    if config.layoutType == "jp":
+      layout = KeyboardLayoutJP(keyboard)
+    else:
+      layout = KeyboardLayoutUS(keyboard)
+    textShow("You got it.","Welcome to customkey","           ( ^_^)b")
+    buzz(2)
+    time.sleep(3)
 
 def next(current):
     for i in range(len(config.keymap)):
