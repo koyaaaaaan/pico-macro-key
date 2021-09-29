@@ -19,9 +19,10 @@ Spec
 - OLED LCD Display 128x32 I2C Mono
 
 ## Set up Raspberry Pi Pico
-1. Install Circuit Python (6.3)
-https://circuitpython.org/board/raspberry_pi_pico/
-2. [src](src) Copy source code to root directory of Raspberry Pi Pico 
+1. Install Circuit Python (6.3)  
+https://circuitpython.org/board/raspberry_pi_pico/  
+2. Copy source code to root directory of Raspberry Pi Pico  
+[src](src)   
 <img src="./circuitpython_dir.png" width="320" />
 3. Thats all  
   
