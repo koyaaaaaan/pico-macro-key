@@ -19,11 +19,17 @@ Spec
 - OLED LCD Display 128x32 I2C Mono
 
 ## Set up Raspberry Pi Pico
-1. Install Circuit Python
+1. Install Circuit Python (6.3)
 https://circuitpython.org/board/raspberry_pi_pico/
 2. [src](src) Copy source code to root directory of Raspberry Pi Pico 
 <img src="./circuitpython_dir.png" width="320" />
-3. Thats all
+3. Thats all  
+  
+```
+If you wanna use upper verion of Circuit Python then 6.3, please replace the ALL mpy File under in "lib" directory.  
+7x Adafruit bundle is here.
+https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20210928
+```
 
 ## Electric Circuit
 ※ If you wanna change the GP Pin, please change the pin no "# Circuit Configlation" section in code.py  ｀
