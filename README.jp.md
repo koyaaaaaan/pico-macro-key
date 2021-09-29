@@ -18,11 +18,17 @@
 ※ シフトキーと通常ボタンは形か色を変えるとわかりやすいです。
 
 ## Raspberry Pi Picoのセットアップ
-1. Circuit Pythonをインストールしてください。  
+1. Circuit Pythonをインストールしてください。(v6.3)  
 https://circuitpython.org/board/raspberry_pi_pico/
-2. [src](src) 以下のファイルをRaspberry Pi Picoのフォルダにコピーする  
+2. 以下のファイルをRaspberry Pi Picoのフォルダにコピーする  
+[src](src)  
 <img src="./circuitpython_dir.png" width="320" />
 3. 以上です
+
+```
+7.x以上のCircuitPythonを利用したい場合は"lib"フォルダ以下のmpyファイルを7.xのadafruitバンドルのもので上書きしてください。  
+https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20210928
+```
 
 ## 電子回路を配線する
 ※ もしGP接続を変更する場合は、code.pyを開いて"# Circuit Configlation"の下に設定があるので変更してください。  ｀
