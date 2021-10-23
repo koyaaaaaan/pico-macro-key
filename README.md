@@ -23,7 +23,7 @@ Spec
 https://circuitpython.org/board/raspberry_pi_pico/  
 2. Copy source code to root directory of Raspberry Pi Pico  
 [src](src)   
-<img src="./circuitpython_dir.png" width="320" />
+<img src="./readme/circuitpython_dir.png" width="320" />
 3. Thats all  
   
 ```
@@ -34,7 +34,7 @@ https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20210928
 
 ## Electric Circuit
 ※ If you wanna change the GP Pin, please change the pin no "# Circuit Configlation" section in code.py  ｀
-<img src="./pico-macro-key_bb.png" width="400" />
+<img src="./readme/pico-macro-key_bb.png" width="400" />
   
 Buttons  
 

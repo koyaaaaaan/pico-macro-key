@@ -22,7 +22,7 @@
 https://circuitpython.org/board/raspberry_pi_pico/
 2. 以下のファイルをRaspberry Pi Picoのフォルダにコピーする  
 [src](src)  
-<img src="./circuitpython_dir.png" width="320" />
+<img src="./readme/circuitpython_dir.png" width="320" />
 3. 以上です
 
 ```
@@ -32,7 +32,7 @@ https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20210928
 
 ## 電子回路を配線する
 ※ もしGP接続を変更する場合は、code.pyを開いて"# Circuit Configlation"の下に設定があるので変更してください。  ｀
-<img src="./pico-macro-key_bb.png" width="400" />
+<img src="./readme/pico-macro-key_bb.png" width="400" />
   
 ボタンの配線  
 
@@ -79,9 +79,4 @@ Raspberry Pi Picoにコピーした config.py を編集して保存してくだ�
 6. Shiftを押下すると、次のマクロ３つに切り替わります。
 7. Shiftを押下したままボタン１を押下するともう一度２のロックモードに戻ります。
 
-# 免責事項
-MITライセンスです。  
-改変、公開は自由です。  
-ご自身の責任においてご利用ください。  
-これによって発生した損害はこちらでは負いかねます。  
-特に、情報漏えいになるような内容をマクロに登録されないようご注意ください。
+
