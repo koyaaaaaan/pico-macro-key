@@ -10,8 +10,8 @@ Spec
 - Configurable keyboard type US layout or JP layout
 - Configurable Pin no. for screen lock.
 
-# Implementation
-## Prepare
+# Assemble
+## Components
 - Raspberry Pi Pico
 - Button Switch for Shift Key
 - Button Switch
